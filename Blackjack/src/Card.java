@@ -17,8 +17,14 @@ public class Card {
 
         face = 
         suit = 
+//1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
+        return "the name" + value;
 
-        return
+    }
+
+    public BlackJackCard() { //pass the card, it prints the face and suits
+
+        return ?;
 
     }
 
@@ -30,13 +36,17 @@ public class Card {
 
     face = 0;
     suit = num/13;
-
+*/
     //accessors
     public int getValue(){
         return face;
     }
 
-    */
+        public String getSuit(){
+            return SUITS[face];
+        }
+
+    
 
     public boolean equals(Object obj){
       return false;
