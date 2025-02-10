@@ -9,8 +9,8 @@ public class Card {
 
     public static final String SUITS[] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
-    private String suit;
-    private int face;
+    private String suit; //the type of card
+    private int face; //the face value
 
     //constructors
     public BlackJackCard(int face, String suit) { //pass the card, it prints the face and suits
