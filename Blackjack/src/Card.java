@@ -25,6 +25,13 @@ public class Card {
         cardNum = num;
         face = cardNum % 13;
         suit = cardNum / 13;
+
+        if (face == 0) {
+            face = 13;
+            suit = suit - 1;
+        }
+
+        
     }
 
 
