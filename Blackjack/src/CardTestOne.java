@@ -9,20 +9,20 @@ public class CardTestOne{
 		Card one = new Card(1);
 		System.out.println(one);
 
-		Card one = new Card(12);
-		System.out.println(one);
+		Card two = new Card(12);
+		System.out.println(two);
 
-		Card one = new Card(13);
-		System.out.println(one);
+		Card three = new Card(13);
+		System.out.println(three);
 
-	Card one = new Card(14); //ace of spades
-		System.out.println(one);
+		Card four = new Card(14); //ace of spades
+		System.out.println(four);
 
-		Card one = new Card(51); //queen of clubs
-		System.out.println(one);
+		Card five = new Card(51); //queen of clubs
+		System.out.println(five);
 
-		Card one = new Card(52); //king of clubs
-		System.out.println(one);
+		Card six = new Card(52); //king of clubs
+		System.out.println(six);
 
 		/* 
 		Card two = new BlackJackCard(1,"DIAMONDS");

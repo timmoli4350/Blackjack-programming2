@@ -9,12 +9,27 @@ public class Card {
 
     public static final String SUITS[] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
-    private String suit; //the type of card
+    private int cardNum;
+    private int suit; //the type of card
     private int face; //the face value 1-13
 
     //constructors
-    //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
 
+    public Card() { //default constructor
+        cardNum = 0;
+        face = (cardNum) % 13;
+        suit = ((cardNum) / 13);
+    }
+
+    public Card(int num) { //input a number
+        cardNum = num;
+        face = cardNum % 13;
+        suit = cardNum / 13;
+    }
+
+
+    //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
+/* 
     public void BlackJackCard(int face, String suit) { //pass the card, it prints the face and suits
 
         face = ;
@@ -30,15 +45,16 @@ public class Card {
 
     }
 
-    //default constructor: nothing passed
-
+    */
 
     //modifiers 
-    /* 
+    public void setFace(int face) {
+        
+    }
 
-    face = 0;
-    suit = num/13;
-*/
+    public void setSuit(int suit) {
+
+    }
 
     //accessors
     public int getValue(){
@@ -46,7 +62,7 @@ public class Card {
     }
 
     public String getSuit(){
-        return SUITS[face];
+        return SUITS[suit]; //returns the index of the suit in the array
     }
 
 
@@ -58,7 +74,7 @@ public class Card {
 
     public String toString(){
 
-        return FACES[face] + "of" + getSuit() + "| value =" + getValue();
+        return FACES[face] + " of " + getSuit() + " | value = " + getValue();
     }
 
     
