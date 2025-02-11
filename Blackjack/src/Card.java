@@ -10,20 +10,22 @@ public class Card {
     public static final String SUITS[] = {"Hearts", "Spades", "Diamonds", "Clubs"};
 
     private String suit; //the type of card
-    private int face; //the face value
+    private int face; //the face value 1-13
 
     //constructors
-    public BlackJackCard(int face, String suit) { //pass the card, it prints the face and suits
+    //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
 
-        face = 
-        suit = 
-//1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
+    public void BlackJackCard(int face, String suit) { //pass the card, it prints the face and suits
+
+        face = ;
+        suit = ;
         return "the name" + value;
 
     }
 
-    public BlackJackCard() { //pass the card, it prints the face and suits
+    public void BlackJackCard() { //pass the card, it prints the face and suits
 
+        
         return ?;
 
     }
@@ -37,16 +39,16 @@ public class Card {
     face = 0;
     suit = num/13;
 */
+
     //accessors
     public int getValue(){
         return face;
     }
 
-        public String getSuit(){
-            return SUITS[face];
-        }
+    public String getSuit(){
+        return SUITS[face];
+    }
 
-    
 
     public boolean equals(Object obj){
       return false;
@@ -56,7 +58,7 @@ public class Card {
 
     public String toString(){
 
-        return string;
+        return FACES[face] + "of" + getSuit() + "| value =" + getValue();
     }
 
     
