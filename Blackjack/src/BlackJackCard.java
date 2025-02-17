@@ -1,12 +1,15 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Olivia Timmermann
+//Date - Feb. 2025
 
 public class BlackJackCard extends Card
 {
   	//constructors
     public BlackJackCard() {
+		if (face >= 10) {
+
+		}
         super();
     }
 

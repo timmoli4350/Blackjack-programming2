@@ -6,16 +6,17 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Deck extends Card
-{
+public class Deck extends Card {
+	/* 
 	public static final int NUMFACES = 13;
 	public static final int NUMSUITS = 4;
 	public static final int NUMCARDS = 52;
 
 	public static final String SUITS[] = {"CLUBS","SPADES","DIAMONDS","HEARTS"};
-
+*/
 	private int topCardIndex;
 	private ArrayList<BlackJackCard> stackOfCards;
+	//new ArrayList - define
 
 	public Deck (){
 		//initialize data - stackOfCards - topCardIndex
@@ -32,9 +33,10 @@ public class Deck extends Card
 
 	//modifiers
    public void shuffle(){
+		Collections.shuffle(stackOfCards);
+
 		//shuffle the deck
 		//reset variables as needed
-
 		//math.random??
 	}
 
@@ -45,7 +47,7 @@ public class Deck extends Card
 	}
 
 	public int numCardsLeft(){
-		return 0;
+		return topCardIndex;
 	}
 
 	public Card nextCard(){
