@@ -5,8 +5,7 @@
 
 import java.util.*;
 
-public class Player
-{
+public class Player{
    private ArrayList<Card> hand;
    private int winCount;
 
@@ -38,8 +37,7 @@ public class Player
     return hand.size();
     }
 
-   public int getHandValue()
-   {
+   public int getHandValue(){
       return 0;
    }
 

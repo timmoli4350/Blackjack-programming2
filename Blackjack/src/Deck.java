@@ -7,13 +7,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck extends Card {
-	/* 
-	public static final int NUMFACES = 13;
-	public static final int NUMSUITS = 4;
+	
 	public static final int NUMCARDS = 52;
 
 	public static final String SUITS[] = {"CLUBS","SPADES","DIAMONDS","HEARTS"};
-*/
+
 	private int topCardIndex;
 	private ArrayList<BlackJackCard> stackOfCards;
 	//new ArrayList - define
@@ -47,15 +45,20 @@ public class Deck extends Card {
 	}
 
 	public int numCardsLeft(){
-		return topCardIndex;
+		return topCardIndex + 1;
+		//every time you shuffle you do a -1
 	}
 
 	public Card nextCard(){
 
 		if (stackOfCards.size() > 0){
 			return stackOfCards.get(topCardIndex--);
+		} else {
+			shuffle();
 		}
-		return 0;
+
+		return stackOfCards.get(topCardIndex--);
+		
 	}
 
 	public String toString(){

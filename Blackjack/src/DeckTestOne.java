@@ -1,7 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
-//Date -
+//Name - Olivia Timmermann
+//Date - Feb. 2025
 
 import static java.lang.System.*;
 import java.awt.Color;
