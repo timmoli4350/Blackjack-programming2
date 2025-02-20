@@ -10,7 +10,8 @@ public class Player{
    private int winCount;
 
    public Player(){
-
+      winCount = 0;
+      hand = new ArrayList<Card>();
    }
 
    public Player(int score){
@@ -18,11 +19,12 @@ public class Player{
    }
 
    public void addCardToHand(Card temp){
+      hand.add(temp);
         //add 10
    }
 
    public void resetHand(){
-
+      hand.clear();
    }
 
    public void setWinCount(int numwins){
@@ -30,24 +32,24 @@ public class Player{
    }
 
     public int getWinCount() { 
-        return 0; 
+      return winCount; 
     }
 
    public int getHandSize() { 
-    return hand.size();
+      return hand.size();
     }
 
    public int getHandValue(){
       return 0;
    }
 
-   public  boolean  hit(){
+   public  boolean hit(){
     //ask if they want to hit
       return false;
    }
 
    public String toString(){
     //loop according to hand size and print
-      return "";
+      return "Player hand size:" + getHandSize();
    }
 }
