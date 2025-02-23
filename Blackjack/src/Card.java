@@ -36,27 +36,9 @@ public class Card {
 
 
     //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
-/* 
-    public void BlackJackCard(int face, String suit) { //pass the card, it prints the face and suits
 
-        face = ;
-        suit = ;
-        return "the name" + value;
-
-    }
-
-    public void BlackJackCard() { //pass the card, it prints the face and suits
-
-        
-        return ?;
-
-    }
-
-    */
-
-    //modifiers 
     public void setFace(int face) {
-        
+        face = 0;
     }
 
     public void setSuit(int suit) {

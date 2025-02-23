@@ -3,9 +3,10 @@
 //Name - Olivia Timmermann
 //Date - Feb. 2025
 
-public class BlackJackCard extends Card
-{
+public class BlackJackCard extends Card{
   	//constructors
+	int blackjackFaceIndex;
+
     public BlackJackCard() {
 		if (face >= 10) {
 

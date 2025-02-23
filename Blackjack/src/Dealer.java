@@ -5,16 +5,19 @@
 
 public class Dealer extends Player {
 	//define a deck of cards
+	public static int cardCount = 52;
+	private Deck cardDeck;
 
 	public Dealer() {
+		cardDeck = new Deck();
 	}
 
 	public void  shuffle(){
-	   //shuffle the deck
+	   cardDeck.shuffle();
 	}
 
-	public Card  deal(){
-	   return null;
+	public Card deal(){
+	   return cardDeck.nextCard();
 	}
 	
 	public int numCardsLeftInDeck(){

@@ -3,8 +3,9 @@
 
 public class Money {
     
-    int money;
-    int bet;
+    private int money;
+    private int bet;
+    private boolean gameCurrently;
 
     /*
      * while (placeBet == false) {
@@ -19,6 +20,14 @@ public class Money {
     public void originalMoney(int startMoney){
         this.money = startMoney;
     }
+
+    public int getMoney() {
+        return money;
+    }
+
+    // public Money (int money) {
+    //     this.money = money;
+    // }
 
     public boolean placeBet(int myBet) {
         this.bet = myBet;
@@ -36,4 +45,26 @@ public class Money {
 
         return false;
     }
+
+    public void winMoney(double profit) {
+        money += profit * bet; //profit is the scaling on your bet
+    }
+
+    public void tieMoney() {
+        money += bet; //go back to original money that you had
+    }
+
+    //Naturals:
+    public void naturalWin(){
+        money += bet * 1.5;
+    }
+
+    public int getPlayerMoney() {
+        return money;
+    }
+
+    public int getPlayerBet() {
+        return bet;
+    }
+    
 }

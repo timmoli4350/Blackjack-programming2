@@ -9,24 +9,23 @@ import java.util.Collections;
 public class Deck extends Card {
 	
 	public static final int NUMCARDS = 52;
-
 	public static final String SUITS[] = {"CLUBS","SPADES","DIAMONDS","HEARTS"};
-
 	private int topCardIndex;
 	private ArrayList<BlackJackCard> stackOfCards;
 	//new ArrayList - define
 
 	public Deck (){
 		//initialize data - stackOfCards - topCardIndex
-		
+		topCardIndex = 52;
+		stackOfCards = new ArrayList<>();
 		//loop 1-52 stackOfCards.add(new BlackJackCard) !!!!!!!
         
-        for (int i = 0; i <= 52; i++){
-			Card newCard = new Card(i);
+        for (int i = 0; i <= NUMCARDS; i++){
+			BlackJackCard newCard = new BlackJackCard(i);
 			stackOfCards.add(newCard);
-			System.out.println(newCard);
+			//System.out.println(newCard);
 		}
-		
+		shuffle();
 	}
 
 	//modifiers
@@ -35,7 +34,6 @@ public class Deck extends Card {
 
 		//shuffle the deck
 		//reset variables as needed
-		//math.random??
 	}
 
    //accessors
@@ -45,8 +43,8 @@ public class Deck extends Card {
 	}
 
 	public int numCardsLeft(){
-		return topCardIndex + 1;
-		//every time you shuffle you do a -1
+		return topCardIndex;
+		
 	}
 
 	public Card nextCard(){
@@ -54,7 +52,7 @@ public class Deck extends Card {
 		if (stackOfCards.size() > 0){
 			return stackOfCards.get(topCardIndex--);
 		} else {
-			shuffle();
+			shuffle(); //end game?
 		}
 
 		return stackOfCards.get(topCardIndex--);
