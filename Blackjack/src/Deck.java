@@ -48,11 +48,13 @@ public class Deck extends Card {
 	}
 
 	public Card nextCard(){
-		// if (topCardIndex > 0){
-		//  	return stackOfCards.get(topCardIndex--); //run shuffle when you begin a new round
-
+		if (topCardIndex > 0){
+		  	return stackOfCards.get(topCardIndex--); //run shuffle when you begin a new round
+		} else {
+			return null;
+		}
 		// return 0;
-		return stackOfCards.get(topCardIndex--);
+		//return stackOfCards.get(topCardIndex--);
 	}
 	
 

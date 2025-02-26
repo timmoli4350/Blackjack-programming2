@@ -11,7 +11,7 @@ public class Card {
 
     private int cardNum;
     private int suit; //the type of card
-    private int face; //the face value 1-13
+    public int face; //the face value 1-13
 
     public int blackjackFaceIndex;
 

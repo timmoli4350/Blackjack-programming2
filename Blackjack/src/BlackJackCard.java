@@ -12,19 +12,11 @@ public class BlackJackCard extends Card{
 		this.blackjackFaceIndex = super.blackjackFaceIndex;
     }
 
-    // public BlackJackCard(int num) {
-    //     super(num);
-    // }
-
-
-
   	public int getValue()
   	{
+		return face;
   		//enables you to build the value for the game into the card
   		//this makes writing the whole program a little easier
-		
-
-		return 0;
   	}
   	
  }
