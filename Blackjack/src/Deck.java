@@ -53,7 +53,7 @@ public class Deck extends Card {
 		} else {
 			return null;
 		}
-		// return 0;
+
 		//return stackOfCards.get(topCardIndex--);
 	}
 	
