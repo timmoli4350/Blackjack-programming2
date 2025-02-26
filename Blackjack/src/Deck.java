@@ -16,11 +16,10 @@ public class Deck extends Card {
 
 	public Deck (){
 		//initialize data - stackOfCards - topCardIndex
-		topCardIndex = 52;
+		topCardIndex = NUMCARDS;
 		stackOfCards = new ArrayList<>();
-		//loop 1-52 stackOfCards.add(new BlackJackCard) !!!!!!!
         
-        for (int i = 0; i <= NUMCARDS; i++){
+        for (int i = 0; i < NUMCARDS; i++){
 			BlackJackCard newCard = new BlackJackCard(i);
 			stackOfCards.add(newCard);
 			//System.out.println(newCard);
@@ -31,6 +30,7 @@ public class Deck extends Card {
 	//modifiers
    public void shuffle(){
 		Collections.shuffle(stackOfCards);
+		topCardIndex = NUMCARDS - 1;
 
 		//shuffle the deck
 		//reset variables as needed
@@ -48,18 +48,16 @@ public class Deck extends Card {
 	}
 
 	public Card nextCard(){
+		// if (topCardIndex > 0){
+		//  	return stackOfCards.get(topCardIndex--); //run shuffle when you begin a new round
 
-		if (stackOfCards.size() > 0){
-			return stackOfCards.get(topCardIndex--);
-		} else {
-			shuffle(); //end game?
-		}
-
+		// return 0;
 		return stackOfCards.get(topCardIndex--);
-		
 	}
+	
 
 	public String toString(){
 		return stackOfCards + "   topCardIndex = " + topCardIndex;
 	} 
+
 }

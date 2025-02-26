@@ -7,16 +7,14 @@ public class BlackJackCard extends Card{
   	//constructors
 	int blackjackFaceIndex;
 
-    public BlackJackCard() {
-		if (face >= 10) {
-
-		}
-        super();
+    public BlackJackCard(int cardNum) {
+		super(cardNum);
+		this.blackjackFaceIndex = super.blackjackFaceIndex;
     }
 
-    public BlackJackCard(int num) {
-        super(num);
-    }
+    // public BlackJackCard(int num) {
+    //     super(num);
+    // }
 
 
 
@@ -24,7 +22,7 @@ public class BlackJackCard extends Card{
   	{
   		//enables you to build the value for the game into the card
   		//this makes writing the whole program a little easier
-
+		
 
 		return 0;
   	}

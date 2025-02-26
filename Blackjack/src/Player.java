@@ -20,7 +20,6 @@ public class Player{
 
    public void addCardToHand(Card temp){
       hand.add(temp);
-        //add 10
    }
 
    public void resetHand(){
@@ -28,7 +27,7 @@ public class Player{
    }
 
    public void setWinCount(int numwins){
-
+      numwins = winCount;
    }
 
     public int getWinCount() { 
@@ -40,7 +39,12 @@ public class Player{
     }
 
    public int getHandValue(){
-      return 0;
+      int total = 0;
+      for (Card card : hand) {
+         total += card.getValue();
+      }
+      System.out.println(total);
+      return total;
    }
 
    public  boolean hit(){
@@ -49,7 +53,7 @@ public class Player{
    }
 
    public String toString(){
-    //loop according to hand size and print
-      return "Player hand size:" + getHandSize();
+    //loop according to hand size/hand value and print
+      return "Player hand size:" + getHandSize() + "Player hand value:" + getHandValue();
    }
 }

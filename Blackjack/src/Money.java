@@ -1,18 +1,16 @@
 //Olivia Timmermann
 //Feb 2025
 
+import java.util.Scanner;
+
 public class Money {
     
     private int money;
     private int bet;
-    private boolean gameCurrently;
+    // private boolean gameCurrently;
+    Scanner keyboard = new Scanner(System.in);
 
-    /*
-     * while (placeBet == false) {
-     * placeBet();
-     * }
-     * 
-     */
+    
     public void originalMoney() {
         this.money = 300;
     }
@@ -32,15 +30,18 @@ public class Money {
     public boolean placeBet(int myBet) {
         this.bet = myBet;
 
-        if ((money - bet) < 0) {
+        System.out.println("You have: " + getMoney());
+        System.out.println("How much money do you want to bet?");
+        bet = keyboard.nextInt(); //takes the next input from keyboard as an integer, sets bet to it.
 
+        if ((money - bet) < 0) {
             System.out.println("insufficient funds, you have " + money);
             System.out.println("place another bet?");
 
         } else {
             money = money - myBet;
+            System.out.println("You placed a bet of: " + myBet +". You now have: " + money);
             return true;
-
         }
 
         return false;
@@ -50,7 +51,7 @@ public class Money {
         money += profit * bet; //profit is the scaling on your bet
     }
 
-    public void tieMoney() {
+    public void tieMoney() { //if you and dealer both get the same
         money += bet; //go back to original money that you had
     }
 
