@@ -12,7 +12,7 @@ public class Dealer extends Player {
 		cardDeck = new Deck();
 	}
 
-	public void  shuffle(){
+	public void shuffle(){
 	   cardDeck.shuffle();
 	}
 

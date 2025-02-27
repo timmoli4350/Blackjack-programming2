@@ -16,11 +16,11 @@ public class Deck extends Card {
 
 	public Deck (){
 		//initialize data - stackOfCards - topCardIndex
-		topCardIndex = NUMCARDS;
+		topCardIndex = NUMCARDS - 1;
 		stackOfCards = new ArrayList<>();
         
         for (int i = 0; i < NUMCARDS; i++){
-			BlackJackCard newCard = new BlackJackCard(i);
+			BlackJackCard newCard = new BlackJackCard(i+1);
 			stackOfCards.add(newCard);
 			//System.out.println(newCard);
 		}
@@ -49,6 +49,7 @@ public class Deck extends Card {
 
 	public Card nextCard(){
 		if (topCardIndex > 0){
+			//System.out.println(stackOfCards.get(topCardIndex).testSuit());
 		  	return stackOfCards.get(topCardIndex--); //run shuffle when you begin a new round
 		} else {
 			return null;

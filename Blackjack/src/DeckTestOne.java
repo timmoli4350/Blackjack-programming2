@@ -24,6 +24,6 @@ public class DeckTestOne{
 		
 		
 		out.println("\n\ntoString");
-		out.println(deck);							
+		// out.println(deck);							
 	}
 }

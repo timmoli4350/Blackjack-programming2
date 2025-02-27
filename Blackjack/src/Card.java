@@ -53,6 +53,10 @@ public class Card {
         return face;
     }
 
+    public int testSuit(){
+        return suit;
+    }
+
     public String getSuit(){
         return SUITS[suit]; //returns the index of the suit in the array
     }
