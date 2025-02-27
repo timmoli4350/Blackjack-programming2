@@ -27,8 +27,7 @@ public class Money {
     //     this.money = money;
     // }
 
-    public boolean placeBet(int myBet) {
-        this.bet = myBet;
+    public boolean placeBet() {
 
         System.out.println("You have: " + getMoney());
         System.out.println("How much money do you want to bet?");
@@ -39,8 +38,8 @@ public class Money {
             System.out.println("place another bet?");
 
         } else {
-            money = money - myBet;
-            System.out.println("You placed a bet of: " + myBet +". You now have: " + money);
+            money = money - bet;
+            System.out.println("You placed a bet of: " + bet +". You now have: " + money);
             return true;
         }
 

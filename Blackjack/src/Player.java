@@ -53,7 +53,7 @@ public class Player{
 
       String response = keyboard.next();
 
-      if (response.substring(0, 2).equals("yes")){
+      if (response.charAt(0) == 'y'){
          return true;
       } else {
          return false;
