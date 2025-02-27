@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Money {
     
+    public boolean betPlaced;
     private int money;
     private int bet;
     // private boolean gameCurrently;
@@ -37,7 +38,11 @@ public class Money {
             System.out.println("insufficient funds, you have " + money);
             System.out.println("place another bet?");
 
-        } else {
+        } else if (bet == 0) {
+            System.out.println("you must place a bet to play.");
+        }
+        
+        else {
             money = money - bet;
             System.out.println("You placed a bet of: " + bet +". You now have: " + money);
             return true;

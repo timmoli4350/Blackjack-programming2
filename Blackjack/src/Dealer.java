@@ -30,6 +30,8 @@ public class Dealer extends Player {
         //if current is above 17, has to take a hit
 	   return false;
     }
+
+	
 }
 
 

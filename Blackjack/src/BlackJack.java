@@ -32,6 +32,9 @@ public class BlackJack{
 			money.placeBet(); //ask for the player to place a bet before playing
 			dealer.shuffle(); //shuffles the deck at the start of each round
 			
+			if (money.placeBet() == true) {
+
+			
 			player.addCardToHand(dealer.deal()); //each player starts with two cards
 			dealer.addCardToHand(dealer.deal());
 			player.addCardToHand(dealer.deal());
@@ -39,9 +42,11 @@ public class BlackJack{
 			System.out.println("Your cards: " + player.toString() + " Value: " + player.getHandValue() + " Number of Cards: " + player.getHandSize());
 			
 			
-			System.out.println("The dealer's first card: " + dealer.toString() + "Value: " + dealer.getHandValue());
-			dealer.addCardToHand(dealer.deal());
-
+			//System.out.println("The dealer's first card: " + dealer.toString() + "Value: " + dealer.getHandValue());
+			//dealer.addCardToHand(dealer.deal());
+			} else {
+				money.placeBet();
+			}
 		}
 	}
 
