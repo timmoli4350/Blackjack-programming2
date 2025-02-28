@@ -94,20 +94,27 @@ public class BlackJack{
 				
 				if (player.getHandValue() <= 21 && dealer.getHandValue() <= 21){
 					//win conditions
-					if (player.getHandValue() > dealer.getHandValue()) { //Player > Dealer (win)
+					
+					if (dealer.getHandValue() == player.getHandValue()) { //Player > Dealer (win)
+						System.out.println("The dealer chose to hit (<17).");
+						System.out.println("Dealer's hand: " + dealer.toString());
+						System.out.println("You tie! ");
+						gameCurrently = false;
+						money.tieMoney();
+
+					} else if (dealer.getHandValue() > player.getHandValue()) { //Dealer > Player (lose)
+						System.out.println("The dealer chose to hit (<17).");
+						System.out.println("Dealer's hand: " + dealer.toString());
+						System.out.println("Dealer has the higher hand value - they win!");
+						gameCurrently = false;
+
+					} else if (player.getHandValue() > dealer.getHandValue()) { //Dealer = Player (tie)
+						System.out.println("The dealer chose to hit (<17).");
+						System.out.println("Dealer's hand: " + dealer.toString());
 						System.out.println("Player has the higher hand value - they win!");
 						gameCurrently = false;
 						money.winMoney();
 						player.winCount++;
-
-					} else if (dealer.getHandValue() > player.getHandValue()) { //Dealer > Player (lose)
-						System.out.println("Dealer has the higher hand value - they win!");
-						gameCurrently = false;
-
-					} else if (dealer.getHandValue() == player.getHandValue()) { //Dealer = Player (tie)
-						System.out.println("Player has the higher hand value - they win!");
-						gameCurrently = false;
-						money.tieMoney();
 					}				
 				}
 
