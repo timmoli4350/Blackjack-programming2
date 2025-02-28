@@ -36,15 +36,14 @@ public class Money {
 
         if ((money - bet) < 0) {
             System.out.println("insufficient funds, you have " + money);
-            System.out.println("place another bet?");
+            System.out.println(" > place another bet? < ");
 
         } else if (bet == 0) {
             System.out.println("you must place a bet to play.");
-        }
-        
-        else {
+
+        } else {
             money = money - bet;
-            System.out.println("You placed a bet of: " + bet +". You now have: " + money);
+            System.out.println(">>> You placed a bet of: " + bet +". You now have: " + money);
             return true;
         }
 

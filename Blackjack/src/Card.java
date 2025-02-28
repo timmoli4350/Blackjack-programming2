@@ -25,11 +25,11 @@ public class Card {
     }
 
     public Card(int num) { //input a number
-        cardNum = num;
-        face = cardNum % 13;
+        cardNum = num-1;
+        face = cardNum % 13 + 1;
         suit = cardNum / 13;
 
-        if (face == 0) {
+        if (face == 0) { //increments down to a lower suit
             face = 13;
             suit = suit - 1;
         }
@@ -41,7 +41,6 @@ public class Card {
     //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
 
     public void setFace(int face) {
-        face = 0;
     }
 
     public void setSuit(int suit) {
@@ -50,6 +49,9 @@ public class Card {
 
     //accessors
     public int getValue(){
+        if (face >= 11){
+            return 10;
+        }
         return face;
     }
 
@@ -76,5 +78,3 @@ public class Card {
     
 }
 
-
-//edge cases ace and king

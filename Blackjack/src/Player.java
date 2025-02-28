@@ -44,12 +44,12 @@ public class Player{
       for (Card card : hand) {
          total += card.getValue();
       }
-      System.out.println(total);
+      //System.out.println(total);
       return total;
    }
 
    public boolean hit(){
-      System.out.println("do you want to hit?");
+      System.out.println("Do you want to hit?");
 
       String response = keyboard.next();
 
@@ -72,6 +72,7 @@ public class Player{
       System.out.println("The dealer is forced to 'hit' if their card value is under 17.");
       System.out.println("If the dealer busts, and you don't, you win.");
       System.out.println("However, if the dealer is > 17 and < 22, and you stand with a lower value, you lose.");
+      System.out.println("If you bust, you also lose.");
 
       System.out.println("Scoring:");
       System.out.println("Loss: You lose the bet you placed.");
@@ -86,6 +87,12 @@ public class Player{
 
    public String toString(){
     //loop according to hand size/hand value and print
-      return "Player hand size:" + getHandSize() + "Player hand value:" + getHandValue();
+      for (Card card : hand) {
+         System.out.println(card.toString());
+      }
+    
+      return ">>> Hand size: " + getHandSize() + " || Hand value: " + getHandValue() + " <<< ";
+
+
    }
 }

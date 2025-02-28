@@ -9,10 +9,10 @@ public class CardTestOne{
 		Card one = new Card(1);
 		System.out.println(one);
 
-		Card two = new Card(12);
+		Card two = new Card(13);
 		System.out.println(two);
 
-		Card three = new Card(13);
+		Card three = new Card(43);
 		System.out.println(three);
 
 		Card four = new Card(14); //ace of spades
