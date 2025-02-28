@@ -44,7 +44,6 @@ public class Player{
       for (Card card : hand) {
          total += card.getValue();
       }
-      //System.out.println(total);
       return total;
    }
 

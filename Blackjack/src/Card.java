@@ -3,7 +3,7 @@
 //52 cards, blackjack
 
 
-public class Card {
+public class Card extends Player {
     public static final String FACES[] = {"ZERO", "ACE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT",
             "NINE", "TEN", "JACK", "QUEEN", "KING"};
 
@@ -52,6 +52,16 @@ public class Card {
         if (face >= 11){
             return 10;
         }
+//--------------------------------------------------- aces
+        if (face == 1){ 
+            if (getHandValue() + 11 < 21) {
+                return 11;
+            } else {
+                return 1;
+            }
+   
+        }
+//---------------------------------------------------
         return face;
     }
 
@@ -61,6 +71,10 @@ public class Card {
 
     public String getSuit(){
         return SUITS[suit]; //returns the index of the suit in the array
+    }
+
+    public String getFace(){
+        return FACES[face]; //returns the index of the face in the array
     }
 
 
