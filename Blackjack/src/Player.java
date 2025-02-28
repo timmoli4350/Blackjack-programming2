@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Player{
    private ArrayList<Card> hand;
-   private int winCount;
+   public int winCount;
    Scanner keyboard = new Scanner(System.in);
 
    public Player(){
@@ -49,7 +49,7 @@ public class Player{
    }
 
    public boolean hit(){
-      System.out.println("Do you want to hit?");
+      System.out.println("Do you want to hit? (y/n)");
 
       String response = keyboard.next();
 

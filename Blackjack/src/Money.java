@@ -1,5 +1,6 @@
 //Olivia Timmermann
 //Feb 2025
+// Programming II, Wolfe
 
 import java.util.Scanner;
 
