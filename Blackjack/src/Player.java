@@ -77,7 +77,7 @@ public class Player{
       System.out.println("Scoring:");
       System.out.println("Loss: You lose the bet you placed.");
       System.out.println("Tie: You just recieve back your original bet.");
-      System.out.println("Natural Win: You recieve 1.5 times the bet you placed.");
+      System.out.println("Natural Win: You recieve 2.5 times the bet you placed.");
       System.out.println("Win: You recieve 2 times the bet you placed.");
 
       System.out.println("Have fun!");

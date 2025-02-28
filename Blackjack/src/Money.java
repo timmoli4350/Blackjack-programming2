@@ -14,7 +14,7 @@ public class Money {
 
     
     public void originalMoney() {
-        this.money = 300;
+        this.money = 100;
     }
 
     public void originalMoney(int startMoney){
@@ -51,8 +51,8 @@ public class Money {
         return false;
     }
 
-    public void winMoney(double profit) {
-        money += profit * bet; //profit is the scaling on your bet
+    public void winMoney() {
+        money += bet * 2; //profit is the scaling on your bet
     }
 
     public void tieMoney() { //if you and dealer both get the same
@@ -61,7 +61,7 @@ public class Money {
 
     //Naturals:
     public void naturalWin(){
-        money += bet * 1.5;
+        money += bet * 2.5;
     }
 
     public int getPlayerMoney() {
