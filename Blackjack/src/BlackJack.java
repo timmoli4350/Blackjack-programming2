@@ -18,7 +18,7 @@ public class BlackJack{
 	Money money = new Money();
 
 	public BlackJack(){
-
+		money.originalMoney(); //gives the player starting money
 	}
 
 	public static void main(String[] args){
@@ -33,7 +33,7 @@ public class BlackJack{
 		String response = keyboard.next();
 
 		if (response.charAt(0) == 'y'){
-			money.originalMoney(); //gives the player starting money
+			//money.originalMoney(); //gives the player starting money
 			dealer.shuffle(); //shuffles the deck at the start of each round
 			gameCurrently = true;
 		}
@@ -69,13 +69,15 @@ public class BlackJack{
 				}
 
 
-				//dealer plays 
+
+				//dealer plays if player didn't bust
 				if (player.getHandValue() <= 21){
 					while (dealer.getHandValue() < 17) {
 						System.out.println("The dealer chose to hit (<17).");
 						dealer.addCardToHand(dealer.deal());
 						System.out.println("Dealer's hand: " + dealer.toString());
 					}
+					System.out.println("Dealer stops; they exceeded 17.");
 				}
 
 
@@ -84,7 +86,9 @@ public class BlackJack{
 					money.placeBet();
 				}
 			}
-		playAgain();
+		if (money.getMoney() != 0){
+			playAgain();
+		}	
 	}
 
 	public void playAgain() {
