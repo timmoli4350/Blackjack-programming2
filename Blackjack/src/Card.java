@@ -40,7 +40,8 @@ public class Card extends Player {
 
     //1-52 are the card numbers, div by 13 for the suit, then mod by 13 for the number
 
-    public void setFace(int face) {
+    public void setFace(int num) { 
+        face = num;
     }
 
     public void setSuit(int suit) {
@@ -53,15 +54,21 @@ public class Card extends Player {
             return 10;
         }
 //--------------------------------------------------- aces
-        if (face == 1){ 
-            if (getHandValue() + 11 < 21) {
-                return 11;
-            } else {
-                return 1;
-            }
+        // if (face == 1){ //if it's an ace (face = 1)
+        //     if (getHandValue() > 21) { //its taking the hand value after you get the ace so it will never trigger this case 
+        //         setFace(1);
+        //         return 1;
+        //     } else {
+        //         setFace(11);
+        //         return 11;
+        //     }
    
-        }
+        // }
 //---------------------------------------------------
+
+        if (face == 1) {
+            return 11;
+        }
         return face;
     }
 

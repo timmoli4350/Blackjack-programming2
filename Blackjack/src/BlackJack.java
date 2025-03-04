@@ -58,6 +58,7 @@ public class BlackJack{
 						System.out.println("You got a natural!");
 						money.naturalWin();
 						player.winCount++;
+						System.out.println("You now have: " + money.getMoney());
 						gameCurrently = false;
 					}
 
@@ -70,6 +71,7 @@ public class BlackJack{
 					if (player.getHandValue() > 21){
 						System.out.println("Dealer wins; you went over 21!");
 						gameCurrently = false;
+						System.out.println("You now have: " + money.getMoney());
 						break;
 					}	
 				}
@@ -87,6 +89,7 @@ public class BlackJack{
 							gameCurrently = false;
 							money.winMoney();
 							player.winCount++;
+							System.out.println("You now have: " + money.getMoney());
 							break;
 						}
 					}	
@@ -101,12 +104,14 @@ public class BlackJack{
 						System.out.println("You tie! ");
 						gameCurrently = false;
 						money.tieMoney();
+						System.out.println("You now have: " + money.getMoney());
 
 					} else if (dealer.getHandValue() > player.getHandValue()) { //Dealer > Player (lose)
 						System.out.println("The dealer chose to hit (<17).");
 						System.out.println("Dealer's hand: " + dealer.toString());
 						System.out.println("Dealer has the higher hand value - they win!");
 						gameCurrently = false;
+						System.out.println("You now have: " + money.getMoney());
 
 					} else if (player.getHandValue() > dealer.getHandValue()) { //Dealer = Player (tie)
 						System.out.println("The dealer chose to hit (<17).");
@@ -115,6 +120,7 @@ public class BlackJack{
 						gameCurrently = false;
 						money.winMoney();
 						player.winCount++;
+						System.out.println("You now have: " + money.getMoney());
 					}				
 				}
 
@@ -140,4 +146,3 @@ public class BlackJack{
 		}
 	}
 }
-	
